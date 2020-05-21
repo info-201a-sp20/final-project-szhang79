@@ -18,7 +18,7 @@ ratings_chart <- function(data) {
     unique()
 
   # makes a line graph with a line for each rating over 30 years
-  ggplot(ratings_data, aes(x = year, y = total_ratings)) +
+  line_graph <- ggplot(ratings_data, aes(x = year, y = total_ratings)) +
     geom_line(aes(x = year, y = num_ratings, color = rating)) +
     scale_x_continuous(n.breaks = 10) +
     scale_y_continuous(n.breaks = 10) +
@@ -33,6 +33,7 @@ ratings_chart <- function(data) {
       axis.title.x = element_text(face = "bold"),
       axis.title.y = element_text(face = "bold")
     )
+  return(line_graph)
 }
 
 # This chart aims to show and compare the prevalence of different
