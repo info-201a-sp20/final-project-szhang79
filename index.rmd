@@ -25,6 +25,7 @@ In our dataset, the Movie Industry, we want to better understand the trends of t
 ## Graphs
 
 ### Bar Graph
+The four bar chart's purpose is to compare the relationship of how the budget of each type of rating category change throughout the span of 30 years. 
 
 ```{r echo=FALSE}
 plot(budget_bar_graph(movies))
@@ -32,6 +33,12 @@ plot(budget_bar_graph(movies))
 ```
 
 The four charts compares the relationship of how the budget of each type of rating category changes throughout the span of 30 years. Using a bar graph, wrapped into separate rating categories, we are able to see that, besides the rated R category, all the categories increase the budget of the movies throughout the years. We are also able to see that the rated G movie productions have a trend of acquiring a higher budget compared to the other rating categories.
+
+#### Important information:
+* Besides the rated R category, all the categories increase the budget of the movies throughout the years. 
+* The rated G movie productions have a trend of acquiring a higher budget compared to the other rating categories, and the budget increases as the years progress.
+* The rated R category stays at a consistent budget rate per yearly, and it is generally far lower budget compared to the other ratings.
+
 
 ### Line Graph
 
@@ -42,8 +49,8 @@ plot(ratings_chart(movies))
 ```
 
 #### Important information:
-* There has been a rise in PG-13 movies and a decrease in PG movies
-* The number of G movies has remained relatively steady with a very low number of films per year
+* There has been a rise in PG-13 movies and a decrease in PG movies.
+* The number of G movies has remained relatively steady with a very low number of films per year.
 * The R movies tend to be the most frequent but their numbers fluctuate by year.
 
 ### Scatter Plot
