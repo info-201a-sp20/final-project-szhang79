@@ -35,11 +35,3 @@ ratings_chart <- function(data) {
     )
   return(line_graph)
 }
-
-# This chart aims to show and compare the prevalence of different
-# movie ratings over the last 30 years. I chose a line graph to
-# emphasize the rise and falls in the data over time. The graph
-# reveals that there has been a rise in PG-13 movies and a decrease
-# in PG movies. The number of G movies has remained relatively the
-# same with a very low number of films per year. The R movies tend
-# to be the most frequent but their numbers tend to fluctuate by year.
