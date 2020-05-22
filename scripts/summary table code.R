@@ -23,25 +23,27 @@ top_grossing_movie <- movies %>%
   filter(gross == max(gross, na.rm = FALSE)) %>%
   pull(name)
 
-# range of score
-mean_score_year <- movies %>%
+# Most common ratings 
+rating_gross_movie <- movies %>%
   group_by(year) %>%
-  summarize(mean_score = mean(score, na.rm = FALSE)) %>%
-  pull(mean_score)
+  filter(gross == max(gross, na.rm = FALSE)) %>%
+  pull(rating)
 
-# company highest budget per year
-company_highestbudg_year <- movies %>%
+# Movie with Highest Budget
+movie_highest_budg <- movies %>%
   group_by(year) %>%
   filter(budget == max(budget, na.rm = TRUE)) %>%
-  mutate(companies = ifelse(
-  sum(company == company, na.rm = FALSE) > 1, paste0(company[1], ", ",  
-  company[2]), company)) %>%
-  distinct(companies) %>%
-  pull(companies)
-
-summary_table <- data.frame(year, median_budget_year, mean_revenue_year,
-                            mean_score_year, company_highestbudg_year, top_grossing_movie)
-
+  mutate(movie_names = ifelse(
+  sum(name == name, na.rm = FALSE) > 1, paste0(name[1], ", ", name[2]), 
+  name)) %>%
+  distinct(movie_names) %>%
+  pull(movie_names)
+       
+# Summary Table
+summary_table <- data.frame(year, median_budget_year, mean_revenue_year, 
+                            top_grossing_movie, rating_gross_movie, 
+                            movie_highest_budg)
 
 colnames(summary_table) <- c("Year", "Median Budget", "Mean Revenue",
-                             "Mean Score", "Company with Highest Budget Movie", "Top Grossing Movie")
+                             "Top Grossing Movie", 
+                             "Rating of Top Grossing Movie", "Movie Highest Budget")
