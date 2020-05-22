@@ -42,10 +42,3 @@ budget_vs_income <- function(data) {
 
   return(scatter_plot)
 }
-
-# This chart displays the relationship between the average yearly
-# budget and average yearly gross incomes of movies over a thirty
-# year period. The information was displayed on this type of graph,
-# because it clearly depicts the linear relationship between the
-# variables. Each year, the average budget for movies as well as the
-# average gross income has consistently increased.
