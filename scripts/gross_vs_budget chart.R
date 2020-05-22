@@ -33,6 +33,11 @@ budget_vs_income <- function(data) {
       x = "Budget ($)",
       y = "Gross Income ($)",
       color = "Year"
+    ) +
+    theme(
+      plot.title = element_text(face = "bold", hjust = 0.5),
+      axis.title.x = element_text(face = "bold"),
+      axis.title.y = element_text(face = "bold")
     )
 
   return(scatter_plot)
