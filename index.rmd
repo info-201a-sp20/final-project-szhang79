@@ -12,7 +12,9 @@ source("scripts/gross_vs_budget chart.r")
 source("scripts/report_render.r")
 source("scripts/summary_information_script.r")
 source("scripts/summary_table_code.r")
+movies <- read.csv("data/movies.csv")
 ```
+
 
 ## Introduction
 
@@ -23,16 +25,23 @@ source("scripts/summary_table_code.r")
 
 
 
-```{r cars}
-summary(cars)
+```{r echo=FALSE}
+plot(budget_bar_graph(movies))
+
 ```
 
-## Including Plots
+The four charts compares the relationship of how the budget of each type of rating category changes throughout the span of 30 years. Using a bar graph, wrapped into separate rating categories, we are able to see that, besides the rated R category, all the categories increase the budget of the movies throughout the years. We are also able to see that the rated G movie productions have a trend of acquiring a higher budget compared to the other rating categories.
 
-You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+## Line Graph
+
+This chart aims to show and compare the prevalence of different movie ratings over the last 30 years. A line graph emphasizes the rise and falls in the data over time, and ploting the different ratings in different colors on the same graph helps to closely compare their trends. 
+
+```{r audience_rating_vs_time, echo = FALSE}
+plot(ratings_chart(movies))
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+#### Important information:
+* There has been a rise in PG-13 movies and a decrease in PG movies
+* The number of G movies has remained relatively steady with a very low number of films per year
+* The R movies tend to be the most frequent but their numbers fluctuate by year.
