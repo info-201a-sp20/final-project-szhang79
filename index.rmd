@@ -20,6 +20,8 @@ movies <- read.csv("data/movies.csv")
 
 In our dataset, the Movie Industry, we want to better understand the trends of the various characteristics that apply to the external and internal factors of a movie, including the budget, rating, genre, production company, runtime, and so much more. We are analyzing the dataset that spans over three decades: from 1986 - 2016. The purpose of acquiring this dataset is to observe how certain trends have increased, decreased, or stayed the same. An example would be comparing the gross revenue to each genre to analyze which genre generally produces the best selling movies.
 
+[Link](https://www.kaggle.com/danielgrijalvas/movies) to the original data source at __kaggle.com__.
+
 #### Summary Information 
   In our Movies dataset, there are `r number_of_cols` columns. The character types for each column are: `r char_types`. There are `r number_of_rows` rows. These are 10 unique values from the movie names column: `r example_movies`.
   
