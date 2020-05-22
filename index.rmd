@@ -68,6 +68,6 @@ The purpose of this scatter plot is to display the relationship between the aver
 plot(budget_vs_income(movies))
 ```
 
-#### Important Information:
+#### Important information:
 * There is a linear relationship between the average annual budget and the annual gross income.
 * Both the budget and gross income of movies has consistently increased over the three decade period.
