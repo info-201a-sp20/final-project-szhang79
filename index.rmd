@@ -6,6 +6,7 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(dplyr)
+library(knitr)
 source("scripts/audience_rating_chart.r")
 source("scripts/bar_graph_budget.r")
 source("scripts/gross_vs_budget chart.r")
@@ -22,6 +23,14 @@ In our dataset, the Movie Industry, we want to better understand the trends of t
 #### Summary Information 
   In our Movies dataset, there are `r number_of_cols` columns. The character types for each column are: `r char_types`. There are `r number_of_rows` rows. These are 10 unique values from the movie names column: `r example_movies`.
   
+#### Aggregate Summary of Dataset
+```{r, echo=FALSE}
+kable(summary_table)
+```
+
+By grouping our data by year, we can better analyze trends according to time. Firstly, getting the median budget of movies of each year can indicate how much investment and how much work is being put into movie production. According to the data, the median budget appears to be increasing, which is reflective of the growth of the movie industry over time. Secondly, getting the mean revenue of year can is also a factor we can use to analyze the success of movies as well as the growth in viewership and audience over time. Getting the top grossing movie of each year in conjunction with the rating of that movie can tell us what types of movies did extremely well and were the most popular. Lastly, figuring out the movie with the highest budget each year can help us understand how budget compares to success (in terms of revenue).
+  
+  
 ## Bar Graph
 
 
@@ -31,7 +40,7 @@ plot(budget_bar_graph(movies))
 ```
 
 The four charts compares the relationship of how the budget of each type of rating category changes throughout the span of 30 years. Using a bar graph, wrapped into separate rating categories, we are able to see that, besides the rated R category, all the categories increase the budget of the movies throughout the years. We are also able to see that the rated G movie productions have a trend of acquiring a higher budget compared to the other rating categories.
-<<<<<<< HEAD
+
 
 ## Line Graph
 
