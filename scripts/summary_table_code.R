@@ -1,11 +1,12 @@
 library(dplyr)
 library(stringr)
+library(lintr)
 
 movies <- read.csv("data/movies.csv", stringsAsFactors = FALSE)
 movies[, 1][movies[, 1] == 0] <- NA
 year <- unique(movies$year)
 
-# mean budget by year 
+# mean budget by year
 median_budget_year <- movies %>%
   group_by(year) %>%
   summarize(median_budget = median(budget, na.rm = TRUE)) %>%
@@ -23,7 +24,7 @@ top_grossing_movie <- movies %>%
   filter(gross == max(gross, na.rm = FALSE)) %>%
   pull(name)
 
-# Most common ratings 
+# Most common ratings
 rating_gross_movie <- movies %>%
   group_by(year) %>%
   filter(gross == max(gross, na.rm = FALSE)) %>%
@@ -34,16 +35,15 @@ movie_highest_budg <- movies %>%
   group_by(year) %>%
   filter(budget == max(budget, na.rm = TRUE)) %>%
   mutate(movie_names = ifelse(
-  sum(name == name, na.rm = FALSE) > 1, paste0(name[1], ", ", name[2]), 
+  sum(name == name, na.rm = FALSE) > 1, paste0(name[1], ", ", name[2]),
   name)) %>%
   distinct(movie_names) %>%
   pull(movie_names)
-       
+
 # Summary Table
-summary_table <- data.frame(year, median_budget_year, mean_revenue_year, 
-                            top_grossing_movie, rating_gross_movie, 
-                            movie_highest_budg)
+summary_table <- data.frame(year, median_budget_year, mean_revenue_year,
+                    top_grossing_movie, rating_gross_movie, movie_highest_budg)
 
 colnames(summary_table) <- c("Year", "Median Budget", "Mean Revenue",
-                             "Top Grossing Movie", 
-                             "Rating of Top Grossing Movie", "Movie Highest Budget")
+                          "Top Grossing Movie", "Rating of Top Grossing Movie",
+                          "Movie Highest Budget")
