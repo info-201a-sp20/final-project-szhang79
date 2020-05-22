@@ -15,14 +15,14 @@ source("scripts/summary_table_code.r")
 movies <- read.csv("data/movies.csv")
 ```
 
-
 ## Introduction
 
-
+In our dataset, the Movie Industry, we want to better understand the trends of the various characteristics that apply to the external and internal factors of a movie, including the budget, rating, genre, production company, runtime, and so much more. We are analyzing the dataset that spans over three decades: from 1986 - 2016. The purpose of acquiring this dataset is to observe how certain trends have increased, decreased, or stayed the same. An example would be comparing the gross revenue to each genre to analyze which genre generally produces the best selling movies.
 
 #### Summary Information 
-  In our Movies dataset, there are `r number_of_cols` columns. The character types for each column are: `r char_types`. There are `r number_of_rows` rows. These are 10 unique values from the movie names column: `r example_movies`. 
-
+  In our Movies dataset, there are `r number_of_cols` columns. The character types for each column are: `r char_types`. There are `r number_of_rows` rows. These are 10 unique values from the movie names column: `r example_movies`.
+  
+## Bar Graph
 
 
 ```{r echo=FALSE}
@@ -31,7 +31,7 @@ plot(budget_bar_graph(movies))
 ```
 
 The four charts compares the relationship of how the budget of each type of rating category changes throughout the span of 30 years. Using a bar graph, wrapped into separate rating categories, we are able to see that, besides the rated R category, all the categories increase the budget of the movies throughout the years. We are also able to see that the rated G movie productions have a trend of acquiring a higher budget compared to the other rating categories.
-
+<<<<<<< HEAD
 
 ## Line Graph
 
