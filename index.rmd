@@ -23,14 +23,18 @@ In our dataset, the Movie Industry, we want to better understand the trends of t
 [Link](https://www.kaggle.com/danielgrijalvas/movies) to the original data source at __kaggle.com__.
 
 #### Summary Information 
+<<<<<<< HEAD
+  In our Movies dataset, there are `r number_of_cols` columns. The character types for each column are: `r char_types`. There are `r number_of_rows` rows. These are 10 unique values from the movie names column: `r example_movies_q`. Understanding these characteristics of our dataset gives us a better understanding the size of our dataset, what types of values we are working with, and the movies that we are analyzing.
+=======
   In our Movies dataset, there are `r number_of_cols` columns. The character types for each column are: `r char_types`. There are `r number_of_rows` rows. These are 10 unique values from the movie names column: `r example_movies`.
+>>>>>>> 8cfeea2152876797c8eb7f353f68e5060ec1bd6f
   
 #### Aggregate Summary of Dataset
 ```{r, echo=FALSE}
 kable(summary_table)
 ```
 
-By grouping our data by year, we can better analyze trends according to time. Firstly, getting the median budget of movies of each year can indicate how much investment and how much work is being put into movie production. According to the data, the median budget appears to be increasing, which is reflective of the growth of the movie industry over time. Secondly, getting the mean revenue of year can is also a factor we can use to analyze the success of movies as well as the growth in viewership and audience over time. Getting the top grossing movie of each year in conjunction with the rating of that movie can tell us what types of movies did extremely well and were the most popular. Lastly, figuring out the movie with the highest budget each year can help us understand how budget compares to success (in terms of revenue).
+By grouping our data by year, we can better analyze trends according to time. Firstly, getting the median budget of movies of each year can indicate how much investment and how much work is being put into movie production. According to the data, the median budget appears to be slowly increasing, which is reflective of the growth of the movie industry over time. Secondly, getting the mean revenue of year can is also a factor we can use to analyze the success of movies as well as the growth in viewership and audience over time. Getting the top grossing movie of each year in conjunction with the rating of that movie can tell us what types of movies did extremely well and were the most popular. Lastly, figuring out the movie with the highest budget each year can help us understand how budget compares to success (in terms of revenue).
 
 ## Graphs
 

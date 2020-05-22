@@ -13,13 +13,12 @@ get_summary_info <- function(dataset) {
 
 get_summary_info(movies)
 
+# Calculated variables for summary paragraph
 number_of_cols <- length(movies)
 number_of_rows <- nrow(movies)
 column_names <- colnames(movies)
 char_types <- sapply(movies, class)
 example_movies <- sample(unique(movies$name), size = 10)
-
-
-
+example_movies_q <- paste0(" \"", example_movies, "\"")
 
 library(lintr)
