@@ -22,7 +22,6 @@ In our dataset, the Movie Industry, we want to better understand the trends of t
 
 #### Summary Information 
   In our Movies dataset, there are `r number_of_cols` columns. The character types for each column are: `r char_types`. There are `r number_of_rows` rows. These are 10 unique values from the movie names column: `r example_movies`.
-<<<<<<< HEAD
   
 #### Aggregate Summary of Dataset
 ```{r, echo=FALSE}
