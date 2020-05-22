@@ -23,6 +23,11 @@ budget_bar_graph <- function(data) {
       title = "Average Budget Per Year Grouped By Rating",
       x = "Year (1986-2016)",
       y = "Average Budget ($)"
+    ) +
+    theme(
+      plot.title = element_text(face = "bold", hjust = 0.5),
+      axis.title.x = element_text(face = "bold"),
+      axis.title.y = element_text(face = "bold")
     )
 
   return(bar_graph)
