@@ -45,3 +45,13 @@ plot(ratings_chart(movies))
 * There has been a rise in PG-13 movies and a decrease in PG movies
 * The number of G movies has remained relatively steady with a very low number of films per year
 * The R movies tend to be the most frequent but their numbers fluctuate by year.
+
+## Scatter Plot
+
+This is a function that returns a scatter plot by using the given dataframe and comparing to average annual budget to the average annual gross income.
+
+```{r gross_vs_budget chart, echo=FALSE}
+plot(budget_vs_income(movies))
+```
+
+This chart displays the relationship between the average yearly budget and average yearly gross incomes of movies over a thirty year period. The information was displayed on this type of graph, because it clearly depicts the linear relationship between the variables. Each year, the average budget for movies as well as the average gross income has consistently increased.
