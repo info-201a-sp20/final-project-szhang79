@@ -1,5 +1,6 @@
 library("ggplot2")
 library("dplyr")
+library("lintr")
 
 # This is a function that returns 4 bar graphs using the given
 # dataframe and compares the average budget to the year, grouped
@@ -32,5 +33,3 @@ budget_bar_graph <- function(data) {
 
   return(bar_graph)
 }
-
-
