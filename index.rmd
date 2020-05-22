@@ -30,11 +30,6 @@ kable(summary_table)
 ```
 
 By grouping our data by year, we can better analyze trends according to time. Firstly, getting the median budget of movies of each year can indicate how much investment and how much work is being put into movie production. According to the data, the median budget appears to be increasing, which is reflective of the growth of the movie industry over time. Secondly, getting the mean revenue of year can is also a factor we can use to analyze the success of movies as well as the growth in viewership and audience over time. Getting the top grossing movie of each year in conjunction with the rating of that movie can tell us what types of movies did extremely well and were the most popular. Lastly, figuring out the movie with the highest budget each year can help us understand how budget compares to success (in terms of revenue).
-  
-  
-## Bar Graph
-=======
->>>>>>> 84197316854b473c3c4d8530a619c89f1e3ec48c
 
 ## Graphs
 
@@ -46,24 +41,13 @@ plot(budget_bar_graph(movies))
 
 ```
 
-<<<<<<< HEAD
-
-### Important information:
-=======
-The four charts compares the relationship of how the budget of each type of rating category changes throughout the span of 30 years. Using a bar graph, wrapped into separate rating categories, we are able to see that, besides the rated R category, all the categories increase the budget of the movies throughout the years. We are also able to see that the rated G movie productions have a trend of acquiring a higher budget compared to the other rating categories.
-
 #### Important information:
->>>>>>> 84197316854b473c3c4d8530a619c89f1e3ec48c
+
 * Besides the rated R category, all the categories increase the budget of the movies throughout the years. 
 * The rated G movie productions have a trend of acquiring a higher budget compared to the other rating categories, and the budget increases as the years progress.
 * The rated R category stays at a consistent budget rate per yearly, and it is generally far lower budget compared to the other ratings.
 
-<<<<<<< HEAD
-## Line Graph
-=======
-
 ### Line Graph
->>>>>>> 84197316854b473c3c4d8530a619c89f1e3ec48c
 
 This chart aims to show and compare the prevalence of different movie ratings over the last 30 years. A line graph emphasizes the rise and falls in the data over time, and ploting the different ratings in different colors on the same graph helps to closely compare their trends. 
 
