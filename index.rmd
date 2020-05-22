@@ -30,7 +30,7 @@ kable(summary_table)
 ```
 
 By grouping our data by year, we can better analyze trends according to time. Firstly, getting the median budget of movies of each year can indicate how much investment and how much work is being put into movie production. According to the data, the median budget appears to be increasing, which is reflective of the growth of the movie industry over time. Secondly, getting the mean revenue of year can is also a factor we can use to analyze the success of movies as well as the growth in viewership and audience over time. Getting the top grossing movie of each year in conjunction with the rating of that movie can tell us what types of movies did extremely well and were the most popular. Lastly, figuring out the movie with the highest budget each year can help us understand how budget compares to success (in terms of revenue).
-  
+
 ## Graphs
 
 ### Bar Graph
@@ -42,6 +42,7 @@ plot(budget_bar_graph(movies))
 ```
 
 #### Important information:
+
 * Besides the rated R category, all the categories increase the budget of the movies throughout the years. 
 * The rated G movie productions have a trend of acquiring a higher budget compared to the other rating categories, and the budget increases as the years progress.
 * The rated R category stays at a consistent budget rate per yearly, and it is generally far lower budget compared to the other ratings.
