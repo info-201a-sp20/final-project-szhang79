@@ -3,7 +3,7 @@ library("dplyr")
 
 # This is a function that returns 4 bar graphs using the given dataframe
 # and compares the average budget to the year, grouped by rating.
-score_vs_runtime <- function(data) {
+budget_bar_graph <- function(data) {
   budg_data <- data %>%
     select(budget, year, rating) %>%
     filter(budget != 0,
