@@ -7,7 +7,7 @@ get_summary_info <- function(dataset) {
   dataset_info$colnames <- colnames(dataset)
   dataset_info$char_types <- sapply(dataset, class)
   dataset_info$number_of_rows <- nrow(dataset)
-  dataset_info$example_movies <- sample(unique(dataset$name), size = 10)
+  dataset_info$ratings <- unique(dataset$rating)
   return(dataset_info)
 }
 
@@ -18,7 +18,6 @@ number_of_cols <- length(movies)
 number_of_rows <- nrow(movies)
 column_names <- colnames(movies)
 char_types <- sapply(movies, class)
-example_movies <- sample(unique(movies$name), size = 10)
-example_movies_q <- paste0(" \"", example_movies, "\"")
+movie_ratings <- unique(movies$rating)
 
 library(lintr)
