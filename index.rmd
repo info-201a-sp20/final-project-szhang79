@@ -1,5 +1,5 @@
 ---
-title: "index.rmd"
+title: "Movies Report"
 output: html_document
 ---
 
@@ -22,6 +22,7 @@ In our dataset, the Movie Industry, we want to better understand the trends of t
 
 #### Summary Information 
   In our Movies dataset, there are `r number_of_cols` columns. The character types for each column are: `r char_types`. There are `r number_of_rows` rows. These are 10 unique values from the movie names column: `r example_movies`.
+<<<<<<< HEAD
   
 #### Aggregate Summary of Dataset
 ```{r, echo=FALSE}
@@ -32,7 +33,12 @@ By grouping our data by year, we can better analyze trends according to time. Fi
   
   
 ## Bar Graph
+=======
+>>>>>>> 84197316854b473c3c4d8530a619c89f1e3ec48c
 
+## Graphs
+
+### Bar Graph
 The four bar chart's purpose is to compare the relationship of how the budget of each type of rating category change throughout the span of 30 years. 
 
 ```{r echo=FALSE}
@@ -40,13 +46,24 @@ plot(budget_bar_graph(movies))
 
 ```
 
+<<<<<<< HEAD
 
 ### Important information:
+=======
+The four charts compares the relationship of how the budget of each type of rating category changes throughout the span of 30 years. Using a bar graph, wrapped into separate rating categories, we are able to see that, besides the rated R category, all the categories increase the budget of the movies throughout the years. We are also able to see that the rated G movie productions have a trend of acquiring a higher budget compared to the other rating categories.
+
+#### Important information:
+>>>>>>> 84197316854b473c3c4d8530a619c89f1e3ec48c
 * Besides the rated R category, all the categories increase the budget of the movies throughout the years. 
 * The rated G movie productions have a trend of acquiring a higher budget compared to the other rating categories, and the budget increases as the years progress.
 * The rated R category stays at a consistent budget rate per yearly, and it is generally far lower budget compared to the other ratings.
 
+<<<<<<< HEAD
 ## Line Graph
+=======
+
+### Line Graph
+>>>>>>> 84197316854b473c3c4d8530a619c89f1e3ec48c
 
 This chart aims to show and compare the prevalence of different movie ratings over the last 30 years. A line graph emphasizes the rise and falls in the data over time, and ploting the different ratings in different colors on the same graph helps to closely compare their trends. 
 
@@ -55,11 +72,11 @@ plot(ratings_chart(movies))
 ```
 
 #### Important information:
-* There has been a rise in PG-13 movies and a decrease in PG movies
-* The number of G movies has remained relatively steady with a very low number of films per year
+* There has been a rise in PG-13 movies and a decrease in PG movies.
+* The number of G movies has remained relatively steady with a very low number of films per year.
 * The R movies tend to be the most frequent but their numbers fluctuate by year.
 
-## Scatter Plot
+### Scatter Plot
 
 This is a function that returns a scatter plot by using the given dataframe and comparing to average annual budget to the average annual gross income.
 
