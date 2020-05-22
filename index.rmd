@@ -15,16 +15,16 @@ source("scripts/summary_table_code.r")
 movies <- read.csv("data/movies.csv", stringsAsFactors = FALSE)
 ```
 
-## Introduction
+### Introduction
 
 In our dataset, the Movie Industry, we want to better understand the trends of the various characteristics that apply to the external and internal factors of a movie, including the budget, rating, genre, production company, runtime, and so much more. We are analyzing the dataset that spans over three decades: from 1986 - 2016. The purpose of acquiring this dataset is to observe how certain trends have increased, decreased, or stayed the same within the movie industry as it has developed over time for both producers and for the audience. An example would be comparing the gross revenue to each genre to analyze which genre generally produces the best selling movies.
 
-[Link](https://www.kaggle.com/danielgrijalvas/movies) to the original data source at __kaggle.com__.
+[Link](https://www.kaggle.com/danielgrijalvas/movies) to the original data source at _kaggle.com_.
 
-#### Summary Information 
+### Summary Information 
   In our Movies dataset, there are `r number_of_cols` columns, which are named `r column_names`. The character types for each column are: `r char_types`. There are `r number_of_rows` rows. The types of movie ratings included are `r movie_ratings`. Understanding these characteristics of our dataset gives us a better understanding of the size of our dataset, what types of values we are working with, and an example of data we will be analyzing.
   
-#### Aggregate Summary of Dataset
+### Aggregate Summary of Dataset
 ```{r, echo=FALSE}
 kable(summary_table)
 ```
@@ -68,6 +68,6 @@ The purpose of this scatter plot is to display the relationship between the aver
 plot(budget_vs_income(movies))
 ```
 
-#### Important Information:
+#### Important information:
 * There is a linear relationship between the average annual budget and the annual gross income.
 * Both the budget and gross income of movies has consistently increased over the three decade period.
