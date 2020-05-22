@@ -14,25 +14,9 @@ source("scripts/summary_information_script.r")
 source("scripts/summary_table_code.r")
 ```
 
-## R Markdown
+## Introduction
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+In our dataset, the Movie Industry, we want to better understand the trends of the various characteristics that apply to the external and internal factors of a movie, including the budget, rating, genre, production company, runtime, and so much more. We are analyzing the dataset that spans over three decades: from 1986 - 2016. The purpose of acquiring this dataset is to observe how certain trends have increased, decreased, or stayed the same. An example would be comparing the gross revenue to each genre to analyze which genre generally produces the best selling movies.
 
 ## Bar Graph
 
