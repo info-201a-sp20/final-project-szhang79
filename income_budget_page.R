@@ -35,5 +35,5 @@ income_budget_side_panel <- sidebarPanel(
 
 # produces the plot on the page
 income_budget_main_panel <- mainPanel(
-  plotOutput("income_vs_budget"),
+  plotlyOutput("income_vs_budget"),
 )
