@@ -41,5 +41,7 @@ budget_vs_income <- function(data, years_input, size_input) {
       axis.title.y = element_text(face = "bold")
     )
   
-  return(scatter_plot)
+  scatter_plotly <- ggplotly(scatter_plot, width = 820, height = 420, tooltip = "text")
+  
+  return(scatter_plotly)
 }
