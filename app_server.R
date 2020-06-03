@@ -12,7 +12,7 @@ server <- function(input, output) {
   output$income_vs_budget <- renderPlotly({
     budget_vs_income(movies, input$years_input, input$size_input)
   })
-
+  
   output$ratings_plot <- renderPlotly({
     budget_bar_chart(input$rating, input$years, input$color)
   })

@@ -29,7 +29,7 @@ income_budget_side_panel <- sidebarPanel(
     inputId = "size_input",
     label = "Size of Marker",
     choices = list("1" = 2, "2" = 4, "3" = 6, "4" = 8, "5" = 10),
-    selected = 4
+    selected = 2
   )
 )
 
@@ -37,3 +37,11 @@ income_budget_side_panel <- sidebarPanel(
 income_budget_main_panel <- mainPanel(
   plotlyOutput("income_vs_budget"),
 )
+
+# income and budget main takeaways for summary page
+income_budget_takeaways <- "There appears to be a linear relationship between
+the annual averge gross income and the annual average budget of movies. With
+each year, the budget of movies has consistently increased which in turn has
+lead to an increase of the gross income for thos same movies. It is highly
+likely that the budget of movies as well as the incrome from them will
+continue to go up in the future."
