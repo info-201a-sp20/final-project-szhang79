@@ -1,3 +1,6 @@
+library(shiny)
+library(plotly)
+
 # creates the tab page for audience rating over time analysis
 audience_rating_page <- tabPanel(
   "Audience Ratings",
