@@ -1,5 +1,16 @@
 h1 {
   text-align: center;
-  border-bottom: dotted darkgrey;
+  border-bottom: dotted lightgrey;
   line-height: 1.5;
+}
+
+#overview_pg {
+  font-size: 20px;
+}
+
+img {
+  display: block;
+  float: left;
+  padding: 20px;
+  width: 300px;
 }
