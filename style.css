@@ -1,3 +1,7 @@
+h1, h2, h3, h4, p {
+  font-family: verdana;
+}
+
 h1 {
   text-align: center;
   border-bottom: dotted lightgrey;
@@ -14,3 +18,12 @@ img {
   padding: 20px;
   width: 300px;
 }
+
+h4 {
+  font-size: medium;
+}
+
+p {
+  color: #4b4b4b;
+}
+

@@ -27,8 +27,17 @@ budget_vs_income <- function(data, years_input, size_input) {
   
   # creates a scatter plot
   scatter_plot <- ggplot(data = all_data) +
-    geom_point(mapping = aes_string(x = "budget_values", y = "gross_values",
-                             color = "years"), cex = as.numeric(size_input)) +
+    geom_point(mapping = aes(x = budget_values,
+                                    y = gross_values,
+                                    color = years,
+                                    text = paste(
+                                      sep = "<br>",
+                                      paste("Year:", years),
+                                      paste0("Average Budget: $", round(budget_values / 1000000, 2), " mil"),
+                                      paste0("Average Gross Income: $", round(gross_values / 1000000, 2), " mil")
+                                    )
+                                    ),
+               cex = as.numeric(size_input)) +
     labs(
       title = "Average Budget vs. Gross Income from 1986 to 2016",
       x = "Budget ($)",
@@ -41,7 +50,12 @@ budget_vs_income <- function(data, years_input, size_input) {
       axis.title.y = element_text(face = "bold")
     )
   
-  scatter_plotly <- ggplotly(scatter_plot, width = 820, height = 420, tooltip = "text")
+  scatter_plotly <- ggplotly(scatter_plot, width = 820, height = 420, tooltip = "text") %>%
+    layout(legend = list(
+      x = 100,
+      y = 0.5,
+      title = list(text = "<b>Income and Budget</b>")
+    ))
   
   return(scatter_plotly)
 }
