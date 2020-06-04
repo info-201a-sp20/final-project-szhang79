@@ -1,14 +1,22 @@
-h1 {
-  text-align: center;
-  border-bottom: dotted darkgrey;
-  line-height: 1.5;
+h1, h2, h3, h4, p {
   font-family: verdana;
 }
 
-h2 {
+h1 {
+  text-align: center;
+  border-bottom: dotted lightgrey;
+  line-height: 1.5;
 }
 
-h3 {
+#overview_pg {
+  font-size: 20px;
+}
+
+img {
+  display: block;
+  float: left;
+  padding: 20px;
+  width: 300px;
 }
 
 h4 {
