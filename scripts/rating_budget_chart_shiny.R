@@ -14,7 +14,7 @@ budget_bar_chart <- function(rating_input, years_input, color_input) {
     mutate(avg_budg = mean(budget)) %>%
     select(avg_budg, year, rating) %>%
     unique()
-  
+
   bar_graph <- ggplot(budg_data) +
     geom_col(
       aes(
@@ -40,8 +40,8 @@ budget_bar_chart <- function(rating_input, years_input, color_input) {
       axis.title.y = element_text(face = "bold"),
       axis.text.y = element_text(angle = 50, size = 5)
     )
-  
+
   bar_plotly <- ggplotly(bar_graph, width = 820, height = 420, tooltip = "text")
-  
+
   return(bar_plotly)
 }

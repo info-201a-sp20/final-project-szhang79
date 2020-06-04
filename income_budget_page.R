@@ -1,17 +1,6 @@
 library(shiny)
 library(ggplot2)
 
-# creates a tab for income and budget
-income_budget_page <- tabPanel(
-  "Income vs. Budget",
-  p("This graph displays the average annual budget of movies compared to their
-  average annual gross income between 1986 and 2016."),
-  sidebarLayout(
-    income_budget_side_panel,
-    income_budget_main_panel
-  )
-)
-
 # creates the side panel that contains the widgets
 income_budget_side_panel <- sidebarPanel(
   h2("Graph Settings"),
@@ -36,6 +25,17 @@ income_budget_side_panel <- sidebarPanel(
 # produces the plot on the page
 income_budget_main_panel <- mainPanel(
   plotlyOutput("income_vs_budget"),
+)
+
+# creates a tab for income and budget
+income_budget_page <- tabPanel(
+  "Income vs. Budget",
+  p("This graph displays the average annual budget of movies compared to their
+  average annual gross income between 1986 and 2016."),
+  sidebarLayout(
+    income_budget_side_panel,
+    income_budget_main_panel
+  )
 )
 
 # income and budget main takeaways for summary page

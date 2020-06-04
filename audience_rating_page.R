@@ -1,17 +1,6 @@
 library(shiny)
 library(plotly)
 
-# creates the tab page for audience rating over time analysis
-audience_rating_page <- tabPanel(
-  "Audience Ratings",
-  p("This graph aims to show how the number of movies rated G, PG, PG-13, and R
-  fluctuated between 1986 and 2016."),
-  sidebarLayout(
-    audience_side_panel,
-    audience_main_panel
-  )
-)
-
 # control widgets for graph settings
 audience_side_panel <- sidebarPanel(
   h2("Graph Settings"),
@@ -37,6 +26,17 @@ audience_side_panel <- sidebarPanel(
 # plots the line graph
 audience_main_panel <- mainPanel(
   plotlyOutput("audience_ratings_plot"),
+)
+
+# creates the tab page for audience rating over time analysis
+audience_rating_page <- tabPanel(
+  "Audience Ratings",
+  p("This graph aims to show how the number of movies rated G, PG, PG-13, and R
+  fluctuated between 1986 and 2016."),
+  sidebarLayout(
+    audience_side_panel,
+    audience_main_panel
+  )
 )
 
 # notable pattern anaylsis for conclusion page
