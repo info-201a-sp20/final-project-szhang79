@@ -19,7 +19,6 @@ ratings_chart <- function(years_input, ratings_input) {
     group_by(year, rating) %>%
     mutate(num_ratings = length(rating)) %>%
     unique()
-  
   # makes a line graph from year and rating input
   line_graph <- ggplot(ratings_data, aes(x = year, y = total_ratings)) +
     geom_line(aes(
@@ -41,7 +40,10 @@ ratings_chart <- function(years_input, ratings_input) {
     scale_x_continuous(n.breaks = 10) +
     scale_y_continuous(n.breaks = 10) +
     labs(
-      title = paste("Audience Ratings from", years_input[1], "to", years_input[2]),
+      title = paste("Audience Ratings from",
+                    years_input[1],
+                    "to",
+                    years_input[2]),
       x = "Year",
       y = "Number of movies",
       color = "Audience Rating"
@@ -52,14 +54,17 @@ ratings_chart <- function(years_input, ratings_input) {
       axis.title.y = element_text(face = "bold", size = 10),
       legend.title = element_blank()
     )
-  
+
   # makes ggplot into interactive plotly graph with hover information
-  line_graph_plotly <- ggplotly(line_graph, width = 820, height = 420, tooltip = "text") %>%
+  line_graph_plotly <- ggplotly(line_graph,
+                                width = 820,
+                                height = 420,
+                                tooltip = "text") %>%
     layout(legend = list(
       x = 100,
       y = 0.5,
       title = list(text = "<b> Audience Rating</b>")
     ))
-  
+
   return(line_graph_plotly)
 }
