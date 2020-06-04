@@ -4,7 +4,10 @@ library(plotly)
 
 data <- read.csv("data/movies.csv")
 
+# computes a bar graph for rating's budget
 budget_bar_chart <- function(rating_input, years_input, color_input) {
+
+  #filtering the data
   budg_data <- data %>%
     select(budget, year, rating) %>%
     filter(budget != 0,
@@ -15,6 +18,7 @@ budget_bar_chart <- function(rating_input, years_input, color_input) {
     select(avg_budg, year, rating) %>%
     unique()
 
+  # creating the bar graph
   bar_graph <- ggplot(budg_data) +
     geom_col(
       aes(

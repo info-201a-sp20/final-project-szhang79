@@ -1,6 +1,7 @@
 library(shiny)
 library(ggplot2)
 
+#creates a sidepanel of the widgets
 rating_sidepanel <- sidebarPanel(
   h2("Graph Settings"),
   h4("Pick a range of years:"),
@@ -36,13 +37,14 @@ rating_sidepanel <- sidebarPanel(
     ),
     selected = "skyblue2"
   )
-
 )
 
+# Creates a mainpanel of the plot
 rating_mainpanel <- mainPanel(
   plotlyOutput("ratings_plot")
 )
 
+# creates a tab page for rating's budget
 rating_page <- tabPanel(
   "Rating's Budgets",
   p("This bar graph conveys the budget use of specific to the moving ratings,
@@ -53,6 +55,7 @@ rating_page <- tabPanel(
   )
 )
 
+# summary analysis of the rating's budget throughout the years
 rating_budget_summary <- "Besides the rated R category, all the rating
 categories increase the budget of the movies throughout the 30 years.
 The rated G movie productions have a trend of acquiring a higher budget
