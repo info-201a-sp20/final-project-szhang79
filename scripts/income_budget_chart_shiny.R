@@ -43,7 +43,8 @@ budget_vs_income <- function(data, years_input, size_input) {
                                     ),
                cex = as.numeric(size_input)) +
     labs(
-      title = "Average Budget vs. Gross Income from 1986 to 2016",
+      title = paste("Average Budget vs. Gross Income from,",
+                    years_input[1], "to", years_input[2]),
       x = "Budget ($)",
       y = "Gross Income ($)",
       color = "Year"
