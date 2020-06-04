@@ -2,4 +2,24 @@ h1 {
   text-align: center;
   border-bottom: dotted darkgrey;
   line-height: 1.5;
+  font-family: verdana;
 }
+
+h2 {
+  font-family: verdana;
+}
+
+h3 {
+  font-family: verdana;
+}
+
+h4 {
+  font-family: verdana;
+  font-size: medium;
+}
+
+p {
+  font-family: verdana;
+  color: darkgrey;
+}
+
